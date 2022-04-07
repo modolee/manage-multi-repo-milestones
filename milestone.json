@@ -4,10 +4,10 @@
     "title": "test-milestone1",
     "description": "테스트 스프린트1",
     "dueOn": "2022-04-08T09:00:00+09:00",
-    "repos": []
+    "repos": ["gd-energy-saving-client", "gd-energy-saving-server"]
   },
   "close": {
     "title": "test-milestone",
-    "repos": ["homepage"]
+    "repos": []
   }
 }
