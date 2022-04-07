@@ -7,7 +7,8 @@
   "author": "modolee <modolee.si@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "start": "node ./dist/index.js"
   },
   "dependencies": {
     "@actions/github": "^5.0.1"
