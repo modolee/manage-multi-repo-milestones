@@ -1,0 +1,13 @@
+{
+  "owner": "GreenDataKR",
+  "open": {
+    "title": "test-milestone",
+    "description": "테스트 스프린트",
+    "dueOn": "2022-04-08T09:00:00+09:00",
+    "repos": []
+  },
+  "close": {
+    "title": "test-milestone",
+    "repos": ["homepage"]
+  }
+}
