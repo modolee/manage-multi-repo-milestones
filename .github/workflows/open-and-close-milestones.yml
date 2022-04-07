@@ -1,5 +1,6 @@
 name: Open and Close Milestones
 on:
+  workflow_dispatch:
   push:
     paths:
       - 'milestone.json'
@@ -16,6 +17,4 @@ jobs:
 
       - name: Install dependencies, Build and Run
         run: |
-          yarn
-          yarn build
-          node ./dist/index.js ${{ secrets.GPA_TOKEN }}
+          yarn && yarn build && node ./dist/index.js ${{ secrets.GPA_TOKEN }}
