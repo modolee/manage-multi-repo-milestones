@@ -6,7 +6,7 @@ on:
       - 'milestone.json'
 
 jobs:
-  build:
+  open-and-close:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source code
