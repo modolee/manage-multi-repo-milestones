@@ -1,9 +1,9 @@
 {
-  "name": "create-multi-repo-milestones",
+  "name": "manage-multi-repo-milestones",
   "version": "0.1.0",
-  "description": "Create milestones of multiple repository at github",
+  "description": "Manage milestones of multiple repository at github",
   "main": "index.js",
-  "repository": "git@github.com:modolee/create-multi-repo-milestones.git",
+  "repository": "git@github.com:modolee/manage-multi-repo-milestones.git",
   "author": "modolee <modolee.si@gmail.com>",
   "license": "MIT",
   "scripts": {

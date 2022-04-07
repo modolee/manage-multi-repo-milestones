@@ -27,17 +27,16 @@ const runOpenMilestones = async (
 
     const { title, dueOn, description } = openMilestoneInfo;
 
-    await Promise.all(
-      openMilestoneInfo.repos.map(repo =>
-        octokit.rest.issues.createMilestone({
-          owner,
-          repo,
-          title,
-          due_on: dueOn,
-          description
-        })
-      )
-    );
+    const openMilestone = async (repo: string) =>
+      octokit.rest.issues.createMilestone({
+        owner,
+        repo,
+        title,
+        due_on: dueOn,
+        description
+      });
+
+    await Promise.all(openMilestoneInfo.repos.map(openMilestone));
   }
 };
 
@@ -79,6 +78,7 @@ const runCloseMilestones = async (
 };
 
 const run = async (token: string) => {
+  if (!token) printErrorAndExit('GPA_TOKEN is required');
   if (!milestoneInfo) printErrorAndExit('milestone.json file is empty');
   if (!milestoneInfo.owner) printErrorAndExit('owner is empty');
 
